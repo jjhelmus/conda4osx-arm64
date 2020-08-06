@@ -28,16 +28,6 @@ build:
 
 requirements:
   build:
-    - posix                              # [win]
-    - make                               # [unix] 
-    - {{posix}}autoconf
-    - {{posix}}automake{{ am_version }}  # [win]
-    - {{posix}}automake                  # [not win]
-    - {{posix}}libtool
-    - {{posix}}patch
-    - {{posix}}texinfo
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
   host:
   run:
     - {{native}}gcc-libs  # [win]

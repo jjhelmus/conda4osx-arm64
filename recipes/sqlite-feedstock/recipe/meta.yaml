@@ -24,9 +24,6 @@ build:
     - {{ pin_subpackage('sqlite') }}
 
 requirements:
-  build:
-    - {{ compiler('c') }}
-    - make  # [not win]
   host:
     - ncurses  # [not win]
     - readline  # [not win]

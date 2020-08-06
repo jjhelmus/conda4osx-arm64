@@ -15,12 +15,6 @@ build:
   run_exports:
     - {{ pin_subpackage('bzip2') }}
 
-requirements:
-  build:
-    - {{ compiler('c') }}
-    - jom   # [win]
-    - make  # [unix]
-
 test:
   commands:
     - bzip2 --help  # [unix]

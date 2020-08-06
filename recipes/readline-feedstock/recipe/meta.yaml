@@ -16,10 +16,6 @@ build:
     - {{ pin_subpackage('readline') }}
 
 requirements:
-  build:
-    - pkg-config
-    - {{ compiler('c') }}
-    - make
   host:
     - ncurses
   run:

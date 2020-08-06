@@ -47,6 +47,9 @@ if [[ ${target_platform} == linux-ppc64le ]]; then
   _OPTIMIZED=no
 fi
 
+CC=gcc
+_OPTIMIZED=no
+
 declare -a _dbg_opts
 if [[ ${DEBUG_PY} == yes ]]; then
   # This Python will not be usable with non-debug Python modules.

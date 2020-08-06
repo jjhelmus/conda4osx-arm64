@@ -1,5 +1,6 @@
 #!/bin/bash
 
+CC=gcc
 PERL=${PREFIX}/bin/perl
 declare -a _CONFIG_OPTS
 _CONFIG_OPTS+=(--prefix=${PREFIX})
@@ -37,7 +38,7 @@ if [[ ${_BASE_CC} == *-* ]]; then
   esac
 else
   if [[ $(uname) == Darwin ]]; then
-    _CONFIG_OPTS+=(darwin64-x86_64-cc)
+    _CONFIG_OPTS+=(darwin64-arm64-cc)
     _CONFIGURATOR="perl ./Configure"
   else
     # Use config, which is a config.guess-like wrapper around Configure

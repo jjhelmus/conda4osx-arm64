@@ -19,13 +19,6 @@ build:
     - {{ pin_subpackage('xz') }}
 
 requirements:
-  build:
-    - {{ compiler('c') }}
-    - c99-to-c89  # [win and vc<14]
-    - cmake  # [win]
-    - ninja  # [win]
-    - make  # [not win]
-    - automake  # [not win]
   host:
     - msinttypes  # [win and vc<14]
 
@@ -52,13 +45,6 @@ outputs:
     script: install.sh  # [unix]
     script: install.bat  # [win]
     requirements:
-      build:
-        - {{ compiler('c') }}
-        - c99-to-c89  # [win and vc<14]
-        - cmake  # [win]
-        - ninja  # [win]
-        - make  # [not win]
-        - automake  # [not win]
       host:
         - msinttypes  # [win and vc<14]
         - {{ pin_subpackage('xz', exact=True) }}
