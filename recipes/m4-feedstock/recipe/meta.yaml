@@ -16,16 +16,11 @@ build:
   skip: True  # [win]
 
 requirements:
-  build:
-    - {{ compiler('c') }}
-    - make
 
 test:
   commands:
     - m4 --help
     - m4 --version
-    - conda inspect linkages -p $PREFIX m4  # [not win]
-    - conda inspect objects -p $PREFIX m4  # [osx]
 
 about:
   home: http://www.gnu.org/software/m4/

@@ -17,18 +17,6 @@ build:
   number: 9
   skip: true  # [win]
 
-requirements:
-  build:
-    #  make check requirement:
-    - libtool
-  host:
-    - m4
-    - perl
-    #  make check requirement:
-    - {{ compiler('c') }}
-  run:
-    - m4
-    - perl
 
 test:
   commands:

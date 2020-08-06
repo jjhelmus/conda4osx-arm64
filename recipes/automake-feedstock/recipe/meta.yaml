@@ -16,12 +16,9 @@ requirements:
   host:
     - m4
     - autoconf
-    - perl
-    - make
   run:
     - m4
     - autoconf
-    - perl
 
 test:
   commands:

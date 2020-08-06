@@ -28,6 +28,9 @@ build:
 
 requirements:
   build:
+    - autoconf
+    - automake
+    - libtool
   host:
   run:
     - {{native}}gcc-libs  # [win]

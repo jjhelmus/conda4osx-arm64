@@ -66,6 +66,7 @@ if [[ $(uname) == "Linux" ]]; then
   sed -i 's:@toolexeclibdir@:${libdir}:g' libffi.pc.in
 fi
 
+configure_args+=(--build=aarch64-apple-darwin20.0.0)
 ./configure "${configure_args[@]}" || { cat config.log; exit 1;}
 
 make -j${CPU_COUNT} ${VERBOSE_AT}
